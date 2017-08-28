@@ -1,0 +1,41 @@
+
+
+<% include partials/header %>
+
+  <!--Content-->
+  <div class="container">
+
+        <div class="row text-center Source-Container">
+      
+            <% projects.forEach(function(project){ %>
+
+              <div class="col-md-3 col-sm-6">
+
+                <div class="thumbnail">
+                  <h4>
+                    <%= project.projName %>
+                  </h4>
+
+                  <input id="checkbox" type="checkbox" alt="checkbox">
+                  <img href="#checkbox" src="<%= project.projImage %>" alt="<%= project.projName %>" title="<%= project.projName %>">
+                  <!--Links-->
+
+                <a class="ui orange basic button" href="/update/<%= project._id %>/edit">Edit</a>
+                <form id="delete" action="/update/<%= project._id %>?_method=DELETE" method="POST">
+                    <button class="ui red basic button">Delete</button>
+                </form>
+
+                </div>
+                <!--Thumbnail-->
+              </div>
+              <% }); %>
+                <!--Column2-->
+        
+        </div>
+        <!--Row2-->
+
+  </div>
+  <!--Container-->
+
+
+  <% include partials/footer %>

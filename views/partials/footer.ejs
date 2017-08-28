@@ -1,0 +1,59 @@
+
+<!--Footer-->
+ <footer id="footer" class="fixed-bottom">
+  <div class="container">
+    
+    <div id="navbar" class="collapse navbar-collapse">
+
+    </div>
+  </div>
+ </footer>
+
+</div><!--End of wrapper-->
+
+  <script> 
+  
+    $(document).ready(function(){
+    
+        // Active Events
+       
+        // When user click one of the icon from our left-hand side menus, the content of our page will change according to the selection.
+       
+        $('.menus').on("click", function(e){
+      
+        e.preventDefault();// prevent any default JavaScript event
+        
+        // Get the current URl from the child of our current element, from li element 
+        var url = $(this).children("a").attr("href");
+  
+        // Remove indicator
+        $('.menus.active').removeClass("active");
+        
+        // Add new indicator
+        $(this).addClass("active");
+      
+    	  $('#content').remove();// Remove the content
+        $('#contentContainer').load(url + "#content").hide().fadeIn('moderate');// Specify the parent class then the load new content
+        
+        // Load the new element to the parent in a slow fade-in transition 
+      
+        //alert('this works ' + url);
+    
+       });
+    
+        // Slide up landing page and reveal the content of my webpage
+      
+        $("#Discover-Button").click(function(){
+    
+        $("#Source-Container").css("display","block");
+        $("#Landing-Container").slideUp(2000,"swing");
+        
+       });
+      	  
+    }); // End of global function
+  
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+
+
+<% include partials/header %>
+    <div class="ui main text container segment" id="Source-Container" style="padding-top:10%">
+        <div class="ui huge header">Edit
+            <%= project.projName %>
+        </div>
+        <form class="ui form" action="/update/<%= project._id %>?_method=PUT" method="POST">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="project[projName]" value="<%= project.projName %>">
+            </div>
+            <div class="field">
+                <label>Image</label>
+                <input type="text" name="project[projImage]" placeholder="enter the image url here" value="<%= project.projImage %>">
+                <label>Link to the project</label>
+                <input type="text" name="project[projLink]" placeholder="enter the link url here" value="<%= project.projLink %>"/>
+            </div>
+
+            <div class="field">
+                <label>Project Description</label>
+
+                <input  class="form-control" type="text" name="projLanguages" value="<%= project.projDescription.projLanguages %>">
+                <input  class="form-control" type="text" name="status" value="<%= project.projDescription.status %>">
+
+            </div>
+
+              <label>Purpose of this project</label>
+              <textarea  
+               class="form-control" 
+               type="text" 
+               name="purpose" 
+               cols="30" rows="5" 
+               dirname="purpose.dir" placeholder="<%= project.projDescription.purpose %>"></textarea>
+
+            <input class="ui violet big basic button" type="submit">
+
+        </form>
+    </div>
+    <% include partials/footer %>

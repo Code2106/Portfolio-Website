@@ -1,0 +1,87 @@
+<% include partials/header%>
+
+  <!--Landing Page-->
+  <div id="Landing-Container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="Landing-Content">
+
+            <h4>ePortfolio</h4>
+            <button id="Discover-Button">Discover My Works!</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+     <div class="row text-center Source-Container"><!--If you added id here style won't' like it and will fail-->
+           <% projects.forEach(function(project){ %>
+
+              <div class="col-md-3 col-sm-6">
+
+                <div class="thumbnail">
+                  <h4>
+                    <%= project.projTitle %>
+                  </h4>
+
+                  <a href="<%= project.projLink%>" alt="Links to see <%= project.projTitle %>" target="_blank">
+                    
+                  <img src=<%= project.projImage%> alt="<%= project.projTitle %>"  title="Click this image to view the project"><!--Links--></a>
+
+                  <button aria-expanded="true" aria-selected="true" class="dropbtn panel-border panel-title" data-parent="#s-lg-general-accordion-1"
+                    data-toggle="collapse" href="#<%= project._id %>" id="<%= project._id %>_link" tabindex="0">More Info
+            </button>
+
+                  <!--This is just test for dropdown-->
+                  <div aria-expanded="true" aria-hidden="false" aria-selected="false" class="dropdown-content panel-collapse collapse" id="<%= project._id %>"
+                    tabindex="0">
+
+                    <div class="panel-body">
+
+                      <!--Description-->
+<article>
+  <header>
+    <h4
+    >Languages Use:</h4
+    >
+    <p><%= project.projDescription.projLanguages %></p>
+  </header>
+</article> 
+                      
+<article>
+  <header>
+    <h4
+    > Purpose:</h4
+    >
+    <p><%= project.projDescription.purpose %></p>
+  </header>
+</article>             
+                           
+<article>
+  <header>
+    <h4
+    >Status:</h4
+    >
+    <p><%= project.projDescription.status %></p>
+  </header>
+</article>        
+                       
+
+                    </div>
+                    <!--panel body-->
+                  </div>
+                  <!--div outside panel-body-->
+                </div>
+                <!--Thumbnail-->
+
+              </div>
+              <% }); %>
+                <!--Column2-->
+    </div>
+</div>
+
+
+  <% include partials/footer%>

@@ -1,0 +1,384 @@
+
+/*General Styles*/
+
+*{
+	
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  margin: 0px;  
+  
+}
+
+
+html,body {height: 100%;}
+
+  
+body {
+ background: url(https://images.unsplash.com/photo-1462557522227-30b31bfb0db9?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=);
+ background-size: cover;
+ background-position: center; 
+ background-repeat: no-repeat;
+}
+
+/*General Styles*/
+
+/*Landing page Styles*/
+#homeContent h1{
+  margin-left: 15%;
+  font-weight: 700;
+  font-size: 5em;
+  text-align: right;
+  text-decoration: underline wavy gray;
+  line-height: 1px;
+
+}
+
+
+
+
+ #homeContent{
+	padding-top: 25%;
+	text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+
+
+#Landing-Container{
+
+  height:100%;
+  width:100%;
+  background-color: #45cb85;
+
+}
+
+#Landing-Content{
+
+  
+	padding-top: 30%;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+#Discover-Button{
+
+ text-decoration: none;
+ color: black;
+ padding: 15px 40px;
+ border-radius: 4px;
+ font-weight: normal;
+ text-transform: uppercase;
+ transition: all 0.2s ease-in-out;
+
+}
+
+#Discover-Button:hover {
+
+ color: rgba(255, 255, 255, 1);
+ box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+
+}
+
+.Source-Container{
+
+display:flex; 
+flex-wrap: wrap;
+padding:5%;
+
+}
+
+.thumbnail{
+
+    transform: scale(1.0); 
+   -webkit-transition: all .3s ease-out;
+   -moz-transition:    all .3s ease-out;
+   -o-transition:      all .3s ease-out;
+   -ms-transition:     all .3s ease-out;
+    transition:all .3s ease-out; 
+    margin: 15%;
+
+}
+
+.thumbnail:hover {
+
+    transition:all .3s ease-in-out; 
+    transform: scale(1.3); 
+    cursor:pointer;
+
+}
+
+/*Landing page Styles*/
+
+/*About page style*/
+#footer{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+
+}
+
+#sidebar{
+
+/*margin-top:3.9%;*/
+background-color: transparent;
+
+}
+
+#details{
+
+position:absolute;
+margin-top:7%;
+/*padding-top:10%;*/
+
+}
+
+.wrapper{
+
+width: 1028px;
+height: 100%;
+padding: 0px;
+display:flex;
+
+}
+
+/* Sidebar Style Start */
+aside{
+
+height:600px;
+width:6%;
+float:left;
+background-color:gray;
+
+}
+
+
+div.panel{
+
+background-color: none;
+
+}
+
+#projectLink{
+
+}
+
+.panel-title{
+
+text-align: center;
+
+}
+
+.panel-heading{
+	
+margin-top:30px;
+
+}
+
+
+/*sidebar menus*/
+
+/*********************************/
+
+aside ul{
+
+list-style-type: none;
+align-content:center;
+
+}
+
+
+.menuIcon{
+
+	background: url(images/svg/Menus.svg) no-repeat;
+	height: 48px;
+	width: 48px;
+	margin-top: 70px;
+  margin-left: 7px;
+  margin-right:8px;
+	display:inline-block;
+	
+}
+
+
+#contentContainer{
+
+}
+
+
+/*Menu Icon background position, change when hover*/
+#profMenu{
+
+  background-position:left top;
+
+}
+
+#profMenu:hover{
+
+  background-position:left bottom;
+
+}
+
+#skillMenu{
+
+background-position:-47px top;
+
+}
+
+#skillMenu:hover{
+
+background-position:-47px bottom;
+
+}
+
+#expMenu{
+
+background-position:-93.7px top;
+
+}
+
+#expMenu:hover{
+
+background-position:-93.7px bottom;
+
+}
+
+#academMenu{
+
+background-position:-140.3px top;
+
+}
+
+#academMenu:hover{
+
+background-position:-140.3px bottom;
+
+}
+
+#achieveMenu{
+
+background-position:right top;
+
+}
+
+#achieveMenu:hover{
+
+ background-position:right bottom;
+
+}
+
+/* Sidebar Style End */
+
+
+/* Main Content Style Start */
+#contentContainer{
+
+float: right;
+position: relative;
+width: 100%;
+height:100%;
+padding:5px;
+
+}
+
+#contentAdjuster{
+
+margin: auto 30px auto 30px;
+
+}
+
+#contentAdjuster{
+
+height: 300px;
+
+}
+
+#contentAdjuster div{
+
+margin: 30px 30px auto 30px;
+
+}
+
+.clearfix::after {
+	
+    clear: both;
+    display: table;
+    
+}
+
+#profContainer{
+
+
+
+}
+
+#summaryContainer{
+
+border-spacing: 5px;
+
+}
+
+#profPic{
+
+float:left;
+height: 150px;
+
+}
+
+#imgContainer{
+
+height:200px;
+border-radius: 50%;
+
+}
+
+#Summary{
+	
+margin-top: -40px;
+float: right;
+width: 73%;
+
+}
+
+#Content{
+
+clear: both;
+height: 700px;
+width: 1327px;
+text-align:left;
+
+}
+
+#mainContent{
+
+padding-top:10px;
+
+}
+
+#mainContent article{
+
+padding: 90px 30px 20px 30px;
+width: auto;
+height: 100%;
+}
+
+#detail{
+
+line-height: 195%;
+
+}
+
+/* Main Content Style End */
+
+/* Footer Style Start */
+
+
+/* Footer Style End */
